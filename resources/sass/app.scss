@@ -1,4 +1,3 @@
-
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
@@ -60,4 +59,15 @@ section.user_info {
   float: left;
   max-width: 50px;
   border-radius: 50%;
+}
+
+/* Users edit */
+
+.gravatar_edit {
+  margin: 15px auto;
+  text-align: center;
+  .gravatar {
+    float: none;
+    max-width: 100px;
+  }
 }
