@@ -7,6 +7,9 @@
         <section class="status_form">
           @include('shared._status_form')
         </section>
+        <h4>微博列表</h4>
+        <hr>
+        @include('shared._feed')
       </div>
       <aside class="col-md-4">
         <section class="user_info">
@@ -21,10 +24,10 @@
         你现在所看到的是 <a href="https://learnku.com/courses/laravel-essential-training">Laravel</a> 的示例项目
       </p>
       <p>
-        JUST DONE IT
+        JUST DONE IT ~
       </p>
       <p>
-        <a class="btn btn-lg btn-success" href="{{ route('signup') }}" role="button">注册</a>
+        <a class="btn btn-lg btn-success" href="{{ route('signup') }}" role="button">现在注册</a>
       </p>
     </div>
   @endif

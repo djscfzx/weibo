@@ -33,8 +33,7 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public static function boot()
-    {
+    public static function boot() {
         parent::boot();
 
         static::creating(function ($user) {
@@ -65,8 +64,11 @@ class User extends Authenticatable
         return "http://www.gravatar.com/avatar/$hash?s=$size";
     }
 
-    public function sendPasswordResetNotification($token)
-    {
+    public function sendPasswordResetNotification($token) {
         $this->notify(new ResetPassword($token));
+    }
+
+    public function feed() {
+        return $this->statuses()->orderBy('created_at', 'desc');
     }
 }
